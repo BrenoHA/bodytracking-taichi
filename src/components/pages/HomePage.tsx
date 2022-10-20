@@ -1,14 +1,29 @@
 import React from 'react';
 
-import { Button, ButtonGroup, Text, Flex, Box, HStack } from '@chakra-ui/react';
-import { CardMouvement } from './CardMouvement';
+import {
+  Button,
+  ButtonGroup,
+  Text,
+  Flex,
+  Box,
+  HStack,
+  Image,
+  Stack,
+} from '@chakra-ui/react';
+import { CardMouvement } from '../CardMouvement';
+import { TeamMember } from '../TeamMember';
 
 export const HomePage = () => {
   return (
-    <div>
-      {/*  */}
-      <Box id="Body Tracking Tai Chi">
-        <Text fontSize="5xl" as="b">
+    <Box backgroundColor="#FFF9F1">
+      {/* Body Tracking Tai Chi */}
+      <Box
+        id="Body Tracking Tai Chi"
+        height="90%"
+        paddingLeft="28"
+        paddingTop="8"
+      >
+        <Text fontSize="5xl" as="b" marginBottom="6">
           Body Tracking Tai Chi
         </Text>
         <Flex boxSize={'50%'}>
@@ -28,12 +43,25 @@ export const HomePage = () => {
 
       {/* Le Projet */}
 
-      <Flex id="Le Projet" flexDir={'column'} alignItems="center">
-        <Text fontSize="4xl" as="b">
+      <Flex
+        id="Le Projet"
+        flexDir={'column'}
+        alignItems="center"
+        height="100%"
+        paddingX="16"
+        paddingY="10"
+      >
+        <Text fontSize="4xl" as="b" marginBottom="6">
           Le Projet
         </Text>
         <Flex>
-          <Flex boxSize={'50%'}>
+          <Flex marginRight="10" direction="column">
+            <Image
+              height="40"
+              objectFit="cover"
+              src="imtAtlantique.png"
+              alt="IMT Atlantique Logo"
+            />
             <Text fontSize="lg" align="center">
               Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
               texte employé dans la composition et la mise en page avant
@@ -46,7 +74,13 @@ export const HomePage = () => {
               dans la composition et la mise en page avant impression.
             </Text>
           </Flex>
-          <Flex boxSize={'50%'}>
+          <Flex direction="column">
+            <Image
+              height="40"
+              objectFit="cover"
+              src="imtAtlantique.png"
+              alt="IMT Atlantique Logo"
+            />
             <Text fontSize="lg" align="center">
               Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
               texte employé dans la composition et la mise en page avant
@@ -62,30 +96,47 @@ export const HomePage = () => {
         </Flex>
       </Flex>
 
-      {/* Mouvements */}
+      {/* L'équipe */}
 
-      <Flex id="Mouvements" flexDir={'column'} alignItems="center">
-        <Text fontSize="4xl" as="b">
-          Mouvements
+      <Flex
+        id="L'équipe"
+        direction="column"
+        alignItems="center"
+        height="100%"
+        backgroundColor="#E8DBD1"
+        paddingY="10"
+      >
+        <Text fontSize="4xl" as="b" marginBottom="6">
+          L&apos;équipe
         </Text>
-        <Text fontSize="lg" as="b" align="center">
-          Le Lorem Ipsum est simplement du faux texte employé dans la
-          composition
-        </Text>
-        <HStack spacing={10}>
-          <CardMouvement />
-          <CardMouvement />
-          <CardMouvement />
+        <HStack spacing="16">
+          <TeamMember />
+          <TeamMember />
+          <TeamMember />
+          <TeamMember />
+        </HStack>
+        <HStack spacing="16">
+          <TeamMember />
+          <TeamMember />
+          <TeamMember />
         </HStack>
       </Flex>
 
-      {/* Base de Données */}
+      {/* Bibliographie */}
 
-      <Flex id="Base de Données" flexDir={'column'} alignItems="center">
-        <Text fontSize="4xl" as="b">
-          Base de Données
+      <Flex
+        id="Bibliographie"
+        flexDir={'column'}
+        alignItems="center"
+        height="100%"
+        backgroundColor="#FFEDE6"
+        paddingX="28"
+        paddingY="10"
+      >
+        <Text fontSize="4xl" as="b" marginBottom="6">
+          Bibliographie
         </Text>
-        <Text fontSize="lg" align="center">
+        <Text fontSize="xl">
           Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
           texte employé dans la composition et la mise en page avant impression.
           Le Lorem Ipsum est le faux texte standard de imprimerie depuis les
@@ -95,22 +146,7 @@ export const HomePage = () => {
           mise en page avant impression. Le Lorem Ipsum est simplement du faux
           texte employé dans la composition et la mise en page avant impression.
         </Text>
-        <Button colorScheme="green">Base de Données</Button>
-        <Text fontSize="lg" align="center">
-          Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
-          texte employé dans la composition et la mise en page avant impression.
-          Le Lorem Ipsum est le faux texte standard de imprimerie depuis les
-          années 1500.
-        </Text>
       </Flex>
-
-      {/* L'équipe */}
-
-      <Flex id="L'équipe" flexDir={'column'} alignItems="center">
-        <Text fontSize="4xl" as="b">
-          L&apos;équipe
-        </Text>
-      </Flex>
-    </div>
+    </Box>
   );
 };

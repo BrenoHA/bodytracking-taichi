@@ -2,20 +2,18 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { HomePage } from '../src/components/HomePage';
+import { HomePage } from '../src/components/pages/HomePage';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Bodytracking TaiChi</title>
         <meta name="description" content="IMT Bodytracking Project" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <HomePage />
-      </main>
+      <HomePage />
     </div>
   );
 };
