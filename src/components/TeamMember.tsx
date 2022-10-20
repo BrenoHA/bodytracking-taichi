@@ -20,8 +20,10 @@ export const TeamMember = () => {
         src="https://bit.ly/dan-abramov"
         alt="Dan Abramov"
       />
-      <Text>Cleo CASABONNE</Text>
-      <Text>Chef de projet</Text>
+      <Text fontSize="lg" marginTop="2">
+        Cleo CASABONNE
+      </Text>
+      <Text fontWeight="semibold">Chef de projet</Text>
     </Flex>
   );
 };

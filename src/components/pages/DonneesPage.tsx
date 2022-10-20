@@ -16,7 +16,7 @@ export const DonneesPage = () => {
       {/* Base de Données */}
 
       <Flex id="Base de Données" flexDir={'column'} alignItems="center">
-        <Text fontSize="4xl" as="b">
+        <Text fontSize="4xl" fontWeight="bold">
           Base de Données
         </Text>
         <Text fontSize="lg" align="center">

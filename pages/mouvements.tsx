@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { MouvementsPage } from '../src/components/pages/MouvementsPage';
+import { Header } from '../src/components/Header';
 
 const Mouvements: NextPage = () => {
   return (
@@ -12,7 +13,7 @@ const Mouvements: NextPage = () => {
         <meta name="description" content="IMT Bodytracking Project" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header />
       <MouvementsPage />
     </div>
   );

@@ -19,10 +19,10 @@ export const MouvementsPage = () => {
       {/* Mouvements */}
 
       <Flex id="Mouvements" flexDir={'column'} alignItems="center">
-        <Text fontSize="4xl" as="b">
+        <Text fontSize="4xl" fontWeight="bold">
           Mouvements
         </Text>
-        <Text fontSize="lg" as="b" align="center">
+        <Text fontSize="lg" fontWeight="bold" align="center">
           Le Lorem Ipsum est simplement du faux texte employé dans la
           composition
         </Text>
