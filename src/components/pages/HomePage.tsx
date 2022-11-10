@@ -28,19 +28,29 @@ export const HomePage = () => {
         <Text fontSize="5xl" fontWeight="bold" marginBottom="6">
           Body Tracking Tai Chi
         </Text>
-        <Flex boxSize={'50%'}>
+        <Box boxSize={'50%'}>
           <Text fontSize="xl">
-            Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
-            texte employé dans la composition et la mise en page avant
-            impression. Le Lorem Ipsum est le faux texte standard de imprimerie
-            depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-            des morceaux de texte pour réaliser un livre spécimen de polices de
-            texte. Le Lorem Ipsum est simplement du faux texte employé dans la
-            composition et la mise en page avant impression. Le Lorem Ipsum est
-            simplement du faux texte employé dans la composition et la mise en
-            page avant impression.
+            Le projet “Body Tracking Tai Chi” est un projet étudiant ayant pour
+            but de créer un outil répertoriant des mouvements de Tai Chi pouvant
+            servir à toute personne intéressée de près ou de loin à cet art. Il
+            contient des mouvements réalisés par un avatar grâce à la
+            technologie Body Tracking, les mouvements sont proposés avec
+            différents niveaux de précision dans les gestes. Des conseils sont
+            proposés pour passer d’un niveau à l’autre.
           </Text>
-        </Flex>
+          <Text fontSize="xl">
+            Le coeur du projet est la création d’une base de données contenant
+            toutes les données relatives aux différentes capatations réalisées.
+            La captation des mouvements a été réalisée grâce au système
+            Optitrack.
+          </Text>
+          <Text fontSize="xl">
+            Ce projet a été réalisé en collaboration avec l’école de Tai Chi
+            WUSHU, à Brest. Ce sont la professeur Ren Ping SU-GOARZIN et ses
+            élèves qui ont permis de donner vie aux avatars et d’enrichir la
+            base de donnée.
+          </Text>
+        </Box>
         <Button colorScheme="teal" onClick={handleClick} marginTop="8">
           Mouvements
         </Button>
@@ -62,40 +72,39 @@ export const HomePage = () => {
         <Flex>
           <Flex marginRight="10" direction="column" alignItems="center">
             <Image
-              width="48"
+              width="44"
               objectFit="cover"
               src="imtAtlantique.png"
               alt="IMT Atlantique Logo"
             />
             <Text fontSize="lg" align="center" marginTop="8">
-              Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
-              texte employé dans la composition et la mise en page avant
-              impression. Le Lorem Ipsum est le faux texte standard de
-              imprimerie depuis les années 1500, quand un imprimeur anonyme
-              assembla ensemble des morceaux de texte pour réaliser un livre
-              spécimen de polices de texte. Le Lorem Ipsum est simplement du
-              faux texte employé dans la composition et la mise en page avant
-              impression. Le Lorem Ipsum est simplement du faux texte employé
-              dans la composition et la mise en page avant impression.
+              IMT Atlantique est une grande école d’ingénieurs faisant partie du
+              groupe Mines-Ponts. Issue de la fusion de Télécom Bretagne et des
+              Mines de Nantes, l’école est présente sur trois sites : Brest,
+              Nantes et Rennes. Depuis sa création en 2017, cette institution
+              est largement représentée dans les classements des écoles
+              d’ingénieurs françaises (5e du classement “L’Etudiant 2022”) et
+              des universités internationales (126ème en “Engineering” du “The
+              World University Ranking 2023”).
             </Text>
           </Flex>
           <Flex direction="column" alignItems="center">
             <Image
-              width="48"
+              width="44"
               objectFit="cover"
-              src="imtAtlantique.png"
+              src="logo_taichi.png"
               alt="IMT Atlantique Logo"
             />
             <Text fontSize="lg" align="center" marginTop="8">
-              Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
-              texte employé dans la composition et la mise en page avant
-              impression. Le Lorem Ipsum est le faux texte standard de
-              imprimerie depuis les années 1500, quand un imprimeur anonyme
-              assembla ensemble des morceaux de texte pour réaliser un livre
-              spécimen de polices de texte. Le Lorem Ipsum est simplement du
-              faux texte employé dans la composition et la mise en page avant
-              impression. Le Lorem Ipsum est simplement du faux texte employé
-              dans la composition et la mise en page avant impression.
+              IMT Atlantique incite tout au long de leur parcours les étudiants
+              à découvrir les équipements disponibles sur le site et à profiter
+              du savoir et de l’expertise des nombreux enseignants-chercheurs.
+              Notamment grâce à des projets de groupes de plus en plus
+              professionnalisant au fil de l’avancée du cursus. Le projet “Body
+              Tracking Tai Chi” est un des sujets de projet Commande Entreprise
+              présent en deuxième année, dans lequel les étudiants doivent
+              répondre à la commande d’une entreprise, ici l’école de Tai Chi
+              WUSHU de Brest.
             </Text>
           </Flex>
         </Flex>
@@ -115,15 +124,18 @@ export const HomePage = () => {
           L&apos;équipe
         </Text>
         <HStack spacing="16">
-          <TeamMember />
-          <TeamMember />
-          <TeamMember />
-          <TeamMember />
+          <TeamMember name="Cleo CASABONNE" office="Chef de projet" />
+          <TeamMember
+            name="Quentin SANTARELLI"
+            office="Communication interne"
+          />
+          <TeamMember name="Breno HASPARYK" office="Communication interne" />
+          <TeamMember name="Léa VIGOUROUX" office="Communication externe" />
         </HStack>
         <HStack spacing="16" marginTop="8">
-          <TeamMember />
-          <TeamMember />
-          <TeamMember />
+          <TeamMember name="Julie ROUVIERE " office="Documentation" />
+          <TeamMember name="Chiara GOZLAN" office="Documentation" />
+          <TeamMember name="Emma RAULET" office="Communication externe" />
         </HStack>
       </Flex>
 

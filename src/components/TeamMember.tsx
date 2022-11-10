@@ -10,7 +10,14 @@ import {
   Badge,
 } from '@chakra-ui/react';
 
-export const TeamMember = () => {
+type TeamMemberProps = {
+  name: string;
+  office: string;
+};
+
+export const TeamMember = ({ name, office }: TeamMemberProps) => {
+  var fullName = name.split(' ');
+
   return (
     <Flex direction="column" alignItems="center">
       <Image
@@ -21,9 +28,14 @@ export const TeamMember = () => {
         alt="Dan Abramov"
       />
       <Text fontSize="lg" marginTop="2">
-        Cleo CASABONNE
+        {fullName[0]}
       </Text>
-      <Text fontWeight="semibold">Chef de projet</Text>
+      <Text fontSize="lg" marginTop="-1">
+        {fullName[1]}
+      </Text>
+      <Text fontSize="lg" fontWeight="semibold">
+        {office}
+      </Text>
     </Flex>
   );
 };
