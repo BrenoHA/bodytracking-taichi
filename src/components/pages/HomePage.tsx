@@ -149,6 +149,7 @@ export const HomePage = () => {
         backgroundColor="#FFEDE6"
         paddingX="28"
         paddingY="10"
+        paddingBottom={28}
       >
         <Text fontSize="4xl" fontWeight="bold" marginBottom="6">
           Bibliographie
