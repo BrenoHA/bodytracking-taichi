@@ -2,10 +2,15 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { MouvementsPage } from '../src/components/pages/MouvementsPage';
-import { Header } from '../src/components/Header';
+import { Header } from '../../src/components/Header';
+
+import { useRouter } from 'next/router';
+import { Footer } from '../../src/components/Footer';
 
 const Mouvements: NextPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
     <div>
       <Head>
@@ -14,7 +19,8 @@ const Mouvements: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <MouvementsPage />
+      <div>{id}</div>
+      <Footer />
     </div>
   );
 };
