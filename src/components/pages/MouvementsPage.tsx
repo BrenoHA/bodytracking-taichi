@@ -40,6 +40,11 @@ export const MouvementsPage = () => {
           <CardMouvement />
           <CardMouvement />
         </HStack>
+        <HStack spacing={10} marginBottom={6}>
+          <CardMouvement />
+          <CardMouvement />
+          <CardMouvement />
+        </HStack>
       </Flex>
     </Box>
   );

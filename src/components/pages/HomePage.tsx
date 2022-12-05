@@ -124,18 +124,43 @@ export const HomePage = () => {
           L&apos;équipe
         </Text>
         <HStack spacing="16">
-          <TeamMember name="Cleo CASABONNE" office="Chef de projet" />
+          <TeamMember
+            name="Cleo CASABONNE"
+            office="Chef de projet"
+            image="cleo"
+          />
           <TeamMember
             name="Quentin SANTARELLI"
             office="Communication interne"
+            image="quentin"
           />
-          <TeamMember name="Breno HASPARYK" office="Communication interne" />
-          <TeamMember name="Léa VIGOUROUX" office="Communication externe" />
+          <TeamMember
+            name="Breno HASPARYK"
+            office="Communication interne"
+            image="breno"
+          />
+          <TeamMember
+            name="Léa VIGOUROUX"
+            office="Communication externe"
+            image="lea"
+          />
         </HStack>
         <HStack spacing="16" marginTop="8">
-          <TeamMember name="Julie ROUVIERE " office="Documentation" />
-          <TeamMember name="Chiara GOZLAN" office="Documentation" />
-          <TeamMember name="Emma RAULET" office="Communication externe" />
+          <TeamMember
+            name="Julie ROUVIERE "
+            office="Documentation"
+            image="julie"
+          />
+          <TeamMember
+            name="Chiara GOZLAN"
+            office="Documentation"
+            image="chiara"
+          />
+          <TeamMember
+            name="Emma RAULET"
+            office="Communication externe"
+            image="emma"
+          />
         </HStack>
       </Flex>
 

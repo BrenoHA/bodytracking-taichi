@@ -13,9 +13,10 @@ import {
 type TeamMemberProps = {
   name: string;
   office: string;
+  image: string;
 };
 
-export const TeamMember = ({ name, office }: TeamMemberProps) => {
+export const TeamMember = ({ name, office, image }: TeamMemberProps) => {
   var fullName = name.split(' ');
 
   return (
@@ -24,8 +25,8 @@ export const TeamMember = ({ name, office }: TeamMemberProps) => {
         borderRadius="full"
         boxSize="150px"
         objectFit="cover"
-        src="https://bit.ly/dan-abramov"
-        alt="Dan Abramov"
+        src={`members/${image}.png`}
+        alt={`${image}.png`}
       />
       <Text fontSize="lg" marginTop="2">
         {fullName[0]}
