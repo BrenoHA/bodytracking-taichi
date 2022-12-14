@@ -16,13 +16,18 @@ import { TeamMember } from '../TeamMember';
 export const HomePage = () => {
   const router = useRouter();
 
-  const handleClick = (ev: any) => {
+  const handleClickMouvements = (ev: any) => {
     ev.preventDefault();
     router.push('/mouvements');
   };
 
+  const handleClickGitHub = (ev: any) => {
+    ev.preventDefault();
+    router.push('https://github.com/BrenoHA/bodytracking-taichi');
+  };
+
   return (
-    <Box backgroundColor="#FFF9F1">
+    <Box backgroundColor="#FFF9F1" position="relative">
       {/* Body Tracking Tai Chi */}
       <Box id="Body Tracking Tai Chi" paddingLeft="28" paddingTop="8">
         <Text fontSize="5xl" fontWeight="bold" marginBottom="6">
@@ -51,9 +56,22 @@ export const HomePage = () => {
             base de donnée.
           </Text>
         </Box>
-        <Button colorScheme="teal" onClick={handleClick} marginTop="8">
+        <Button
+          colorScheme="teal"
+          onClick={handleClickMouvements}
+          marginTop="8"
+        >
           Mouvements
         </Button>
+        <Image
+          position="absolute"
+          top="0px"
+          left="40%"
+          width="760px"
+          objectFit="cover"
+          src="wpp_taichi.png"
+          alt="IMT Atlantique Logo"
+        />
       </Box>
 
       {/* Le Projet */}
@@ -189,6 +207,18 @@ export const HomePage = () => {
           mise en page avant impression. Le Lorem Ipsum est simplement du faux
           texte employé dans la composition et la mise en page avant impression.
         </Text>
+        <Box width="80rem" marginY={6}>
+          <Text fontSize="xl" align="center">
+            Lien de code pour ce site Web... Quest-ce que le Lorem Ipsum? Le
+            Lorem Ipsum est simplement du faux texte employé dans la composition
+            et la mise en page avant impression. Le Lorem Ipsum est le faux
+            texte standard de imprimerie depuis les années 1500, quand un
+            imprimeur anonyme assembla ensemble.
+          </Text>
+        </Box>
+        <Button colorScheme="green" onClick={handleClickGitHub}>
+          Code Site
+        </Button>
       </Flex>
     </Box>
   );

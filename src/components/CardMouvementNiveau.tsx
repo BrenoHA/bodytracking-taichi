@@ -10,10 +10,10 @@ import {
   Badge,
   background,
 } from '@chakra-ui/react';
-import { property } from '../data';
 import { useRouter } from 'next/router';
+import { property } from '../data';
 
-export const CardMouvement = () => {
+export const CardMouvementNiveau = () => {
   const router = useRouter();
 
   const handleClick = (ev: any) => {
@@ -31,21 +31,14 @@ export const CardMouvement = () => {
       _hover={{ bg: '#F3EBDF' }}
       onClick={handleClick}
     >
-      <Image src={property.imageUrl} alt="Image Alt" />
-
       <Box p="4">
         <Box display="flex" alignItems="baseline">
           <Badge borderRadius="full" px="2" colorScheme="gray">
-            Avancé
+            {property.level}
           </Badge>
         </Box>
-
-        <Box display="flex" mt="1" alignItems="center">
-          <Box as="span" ml="1" color="gray.600" fontSize="md">
-            {property.title}
-          </Box>
-        </Box>
       </Box>
+      <Image src={property.imageUrl} alt="Image Alt" />
     </Box>
   );
 };

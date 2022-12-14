@@ -14,6 +14,9 @@ import {
 import { CardMouvement } from '../CardMouvement';
 
 export const MouvementsPage = () => {
+  const [isShowMoreActivated, setIsShowMoreActivated] =
+    React.useState<boolean>(false);
+
   return (
     <Box backgroundColor="#FFF9F1" height="100%">
       {/* Mouvements */}
@@ -45,6 +48,69 @@ export const MouvementsPage = () => {
           <CardMouvement />
           <CardMouvement />
         </HStack>
+        <Button
+          display={!isShowMoreActivated ? '' : 'none'}
+          onClick={() => setIsShowMoreActivated(!isShowMoreActivated)}
+          marginBottom="4"
+          colorScheme="blackAlpha"
+        >
+          Voir plus
+        </Button>
+        <Box display={isShowMoreActivated ? '' : 'none'}>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+          <HStack spacing={10} marginBottom={6}>
+            <CardMouvement />
+            <CardMouvement />
+            <CardMouvement />
+          </HStack>
+        </Box>
+        <Button
+          display={isShowMoreActivated ? '' : 'none'}
+          onClick={() => setIsShowMoreActivated(!isShowMoreActivated)}
+          marginBottom="4"
+          colorScheme="blackAlpha"
+        >
+          Voir moin
+        </Button>
       </Flex>
     </Box>
   );
