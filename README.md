@@ -42,7 +42,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
   - \_app.tsx (App configuration page)
   - index.tsx (Home page)
-  - donnes.tsx (Dataset page)
+  - donnees.tsx (Dataset page)
   - mouvements
     - [id].tsx (Dynamic Routes for each movement page)
     - index.tsx (Movements page)
@@ -65,7 +65,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
   - interface
 
-    - Iproperty
+    - Iproperty (Interface from the properties of each movement)
 
   - data
 
