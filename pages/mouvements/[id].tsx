@@ -1,3 +1,4 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -11,15 +12,28 @@ import { IFrameYT } from '../../src/components/IFrameYT';
 import { MouvementsPage } from '../../src/components/pages/MouvementsPage';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { CardMouvementNiveau } from '../../src/components/CardMouvementNiveau';
-import { property } from '../../src/data';
+import { properties } from '../../src/data';
+import { Iproperty } from '../../src/interface/Iproperty';
 
 const Mouvements: NextPage = () => {
   const router = useRouter();
-  const { id } = router.query; //1
+  const { id } = router.query;
+
+  const [data, setData] = React.useState<any>({});
+  const [data2, setData2] = React.useState<any>(properties[6].data);
+  const [data3, setData3] = React.useState<any>(properties[4].data);
+
+  React.useEffect(() => {
+    properties.forEach((property) => {
+      if (property.data.movId == Number(id)) {
+        setData(property.data);
+      }
+    });
+  }, [data, id]);
 
   const handleBackClick = (ev: any) => {
     ev.preventDefault();
-    router.back();
+    router.push('/mouvements');
   };
 
   return (
@@ -40,19 +54,19 @@ const Mouvements: NextPage = () => {
             onClick={handleBackClick}
           />
           <Text fontSize="3xl" fontWeight="bold" marginLeft="16">
-            {property.title}
+            {data.title}
           </Text>
         </Flex>
         <Flex justifyContent="space-around" marginX="16" marginY="2">
           <Text fontSize="2xl" fontWeight="bold">
-            {property.level}
+            {data.level}
           </Text>
           <Text fontSize="2xl" fontWeight="bold">
-            {property.person}
+            {data.person}
           </Text>
         </Flex>
         <Flex justifyContent="center">
-          <IFrameYT embedId={property.embedId} />
+          <IFrameYT embedId={data.embedId} />
         </Flex>
         <Flex justifyContent="center">
           <Text fontWeight="bold" width="70%" align="center" marginTop="6">
@@ -64,8 +78,8 @@ const Mouvements: NextPage = () => {
           </Text>
         </Flex>
         <Flex justifyContent="space-around" marginX="32" marginTop="4">
-          <CardMouvementNiveau />
-          <CardMouvementNiveau />
+          <CardMouvementNiveau data={data2} />
+          <CardMouvementNiveau data={data3} />
         </Flex>
       </Box>
       <MouvementsPage />

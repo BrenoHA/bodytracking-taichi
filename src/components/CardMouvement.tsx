@@ -10,19 +10,21 @@ import {
   Badge,
   background,
 } from '@chakra-ui/react';
-import { property } from '../data';
 import { useRouter } from 'next/router';
+import { Iproperty } from '../interface/Iproperty';
 
-export const CardMouvement = () => {
+export const CardMouvement = ({ data }: Iproperty) => {
   const router = useRouter();
 
   const handleClick = (ev: any) => {
     ev.preventDefault();
-    router.push(`/mouvements/${property.movId}`);
+    router.push(`/mouvements/${data.movId}`);
   };
 
   return (
     <Box
+      marginX={8}
+      marginY={4}
       maxW="sm"
       borderWidth="1px"
       borderRadius="lg"
@@ -31,20 +33,23 @@ export const CardMouvement = () => {
       _hover={{ bg: '#F3EBDF' }}
       onClick={handleClick}
     >
-      <Image src={property.imageUrl} alt="Image Alt" />
+      <Image src={data.imageUrl} alt="Image Alt" height="160px" width="320px" />
 
       <Box p="4">
-        <Box display="flex" alignItems="baseline">
+        <Flex alignItems="baseline">
           <Badge borderRadius="full" px="2" colorScheme="gray">
-            Avancé
+            {data.level}
           </Badge>
-        </Box>
+        </Flex>
 
-        <Box display="flex" mt="1" alignItems="center">
+        <Flex mt="1" alignItems="center" justifyContent="space-between">
           <Box as="span" ml="1" color="gray.600" fontSize="md">
-            {property.title}
+            {data.title}
           </Box>
-        </Box>
+          <Box as="span" ml="1" color="gray.600" fontSize="md">
+            {data.person}
+          </Box>
+        </Flex>
       </Box>
     </Box>
   );

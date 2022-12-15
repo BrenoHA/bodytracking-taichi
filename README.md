@@ -53,13 +53,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
   - all images
 
-- src / components
+- src
 
-  - pages
+  - components
 
-    - all page components
+    - pages
 
-  - all components
+      - all page components
+
+    - all components
+
+  - interface
+
+    - Iproperty
+
+  - data
 
 ## React.js
 

@@ -11,14 +11,14 @@ import {
   background,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import { property } from '../data';
+import { Iproperty } from '../interface/Iproperty';
 
-export const CardMouvementNiveau = () => {
+export const CardMouvementNiveau = ({ data }: Iproperty) => {
   const router = useRouter();
 
   const handleClick = (ev: any) => {
     ev.preventDefault();
-    router.push(`/mouvements/${property.movId}`);
+    router.push(`/mouvements/${data.movId}`);
   };
 
   return (
@@ -34,11 +34,11 @@ export const CardMouvementNiveau = () => {
       <Box p="4">
         <Box display="flex" alignItems="baseline">
           <Badge borderRadius="full" px="2" colorScheme="gray">
-            {property.level}
+            {data.level}
           </Badge>
         </Box>
       </Box>
-      <Image src={property.imageUrl} alt="Image Alt" />
+      <Image src={data.imageUrl} alt="Image Alt" height="200px" width="400px" />
     </Box>
   );
 };
