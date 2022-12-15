@@ -70,11 +70,7 @@ const Mouvements: NextPage = () => {
         </Flex>
         <Flex justifyContent="center">
           <Text fontWeight="bold" width="70%" align="center" marginTop="6">
-            Le Lorem Ipsum est simplement du faux texte employé dans la
-            composition et la mise en page avant impression. Le Lorem Ipsum est
-            le faux texte standard de l&apos;imprimerie depuis les années 1500,
-            quand un imprimeur anonyme assembla ensemble des morceaux de texte
-            pour réaliser un livre spécimen de polices de texte.
+            {data.description}
           </Text>
         </Flex>
         <Flex justifyContent="space-around" marginX="32" marginTop="4">

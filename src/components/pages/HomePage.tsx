@@ -197,7 +197,7 @@ export const HomePage = () => {
         <Text fontSize="4xl" fontWeight="bold" marginBottom="6">
           Bibliographie
         </Text>
-        <Text fontSize="xl">
+        {/* <Text fontSize="xl">
           Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
           texte employé dans la composition et la mise en page avant impression.
           Le Lorem Ipsum est le faux texte standard de imprimerie depuis les
@@ -206,15 +206,15 @@ export const HomePage = () => {
           Ipsum est simplement du faux texte employé dans la composition et la
           mise en page avant impression. Le Lorem Ipsum est simplement du faux
           texte employé dans la composition et la mise en page avant impression.
-        </Text>
+        </Text> */}
         <Box width="80rem" marginY={6}>
-          <Text fontSize="xl" align="center">
+          {/* <Text fontSize="xl" align="center">
             Lien de code pour ce site Web... Quest-ce que le Lorem Ipsum? Le
             Lorem Ipsum est simplement du faux texte employé dans la composition
             et la mise en page avant impression. Le Lorem Ipsum est le faux
             texte standard de imprimerie depuis les années 1500, quand un
             imprimeur anonyme assembla ensemble.
-          </Text>
+          </Text> */}
         </Box>
         <Button colorScheme="green" onClick={handleClickGitHub}>
           Code Site

@@ -32,7 +32,7 @@ export const DonneesPage = () => {
           Base de Données
         </Text>
         <Box width="80rem" marginY={10}>
-          <Text fontSize="lg" align="center">
+          {/* <Text fontSize="lg" align="center">
             Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
             texte employé dans la composition et la mise en page avant
             impression. Le Lorem Ipsum est le faux texte standard de imprimerie
@@ -42,18 +42,18 @@ export const DonneesPage = () => {
             composition et la mise en page avant impression. Le Lorem Ipsum est
             simplement du faux texte employé dans la composition et la mise en
             page avant impression.
-          </Text>
+          </Text> */}
         </Box>
         <Button colorScheme="green" onClick={handleClick}>
           Base de Données
         </Button>
         <Box width="80rem" marginY={8}>
-          <Text fontSize="lg" align="center">
+          {/* <Text fontSize="lg" align="center">
             Quest-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux
             texte employé dans la composition et la mise en page avant
             impression. Le Lorem Ipsum est le faux texte standard de imprimerie
             depuis les années 1500.
-          </Text>
+          </Text> */}
         </Box>
       </Flex>
     </Box>
