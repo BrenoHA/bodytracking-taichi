@@ -74,7 +74,7 @@ export const MouvementsPage = () => {
           marginBottom="4"
           colorScheme="blackAlpha"
         >
-          Voir moin
+          Voir moins
         </Button>
         <Text fontSize="2xl" display={isShowMoreActivated ? '' : 'none'}>
           Mouvements à compléter
@@ -98,7 +98,7 @@ export const MouvementsPage = () => {
           marginBottom="4"
           colorScheme="blackAlpha"
         >
-          Voir moin
+          Voir moins
         </Button>
       </Flex>
     </Box>
