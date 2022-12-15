@@ -14,6 +14,7 @@ import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { CardMouvementNiveau } from '../../src/components/CardMouvementNiveau';
 import { properties } from '../../src/data';
 import { Iproperty } from '../../src/interface/Iproperty';
+import { newProperties } from '../../src/dataEmpty';
 
 const Mouvements: NextPage = () => {
   const router = useRouter();
@@ -29,6 +30,13 @@ const Mouvements: NextPage = () => {
         setData(property.data);
       }
     });
+    if (!data.title) {
+      newProperties.forEach((property) => {
+        if (property.data.movId == Number(id)) {
+          setData(property.data);
+        }
+      });
+    }
   }, [data, id]);
 
   const handleBackClick = (ev: any) => {
